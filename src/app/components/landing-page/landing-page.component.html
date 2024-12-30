@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="background-image">
+      <img src="../assets/Landing_Page.png" alt="Background" />
+      <div class="overlay-content">
+        <input type="text" [(ngModel)]="name" class="text-input" placeholder="Enter your Name"(keydown.enter)="onContinue()" />
+        <button class="continue-button" (click)="onContinue()">Get Started</button>
+      </div>
+    </div>
+  </div>

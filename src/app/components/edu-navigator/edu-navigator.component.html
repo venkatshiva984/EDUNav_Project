@@ -1,0 +1,61 @@
+<div class="site-name">
+  <h1 (click)="redirect()">EDU Navigator</h1>
+</div>
+
+<div class="edu-navigator-container">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="logo">
+        <img src="../assets/EduNav_Logo.png" alt="Logo" />
+      </div>
+      <div class="title">
+        <h1>Hey, {{name}}</h1>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <mat-form-field appearance="outline" class="search-box">
+        <textarea
+          matInput
+          placeholder="How can EDU Navigator help you?"
+          [(ngModel)]="prompt"
+          (keydown.enter)="search($event)"
+          style="width: 100%;"
+        ></textarea>
+        <button *ngIf="prompt" mat-icon-button matSuffix (click)="search()">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <div *ngIf="!request" class="recommended-prompts">
+      <span
+        *ngFor="let message of displayedMessages"
+        class="floating-container"
+        (click)="onMessageClick(message)">
+        {{ message }}
+      </span>
+    </div>
+    <div *ngIf="request">
+      <div class="request">{{request}}</div>
+      <div *ngIf="isLoading" class="loading">
+        Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+      </div>
+      <div *ngIf="responseMessage" class="responseMessage">{{responseMessage}}</div>
+      <div *ngIf="gridData.length && isRefreshed" class="results-container">
+          <table class="results-table">
+              <thead>
+                  <tr>
+                    <th *ngFor="let header of headers">{{ header }}</th>
+                  </tr>
+              </thead>
+              <tbody>
+                    <tr *ngFor="let data of gridData">
+                      <td *ngFor="let header of headers">{{ data[header] }}</td>
+                    </tr>
+              </tbody>
+          </table>
+          <mat-icon class="download-icon" (click)="downloadExcel($event, gridData, headers)">download</mat-icon>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,44 @@
+.container {
+    height: 100vh;
+    background-color: #f3f4f6;
+  }
+  
+  .background-image img {
+    max-width: 100%;
+  }
+  
+  .overlay-content {
+    display: flex;
+    position: absolute;
+    bottom: 27%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .text-input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 20%;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .continue-button {
+    padding: 10px 20px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .continue-button:hover {
+    background-color: #3700b3;
+  }
+  

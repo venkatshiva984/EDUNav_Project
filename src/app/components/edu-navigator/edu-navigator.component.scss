@@ -1,0 +1,147 @@
+.edu-navigator-container {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    // background-color: #f8f9fa;
+    // border-radius: 10px;
+    // box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+
+  .search-container {
+    margin-bottom: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .results-container {
+    margin-top: 20px;
+  }
+
+  .results-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .results-table th,
+  .results-table td {
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .results-table th {
+    background-color: #f1f1f1;
+  }
+
+  .results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .results-table tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .download-icon {
+    padding-left: 97%;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+
+  .site-name {
+    padding: 25px;
+    cursor: pointer;
+  }
+
+  .request{
+    margin-left: auto;
+    width: fit-content;
+    padding: 10px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 10px;
+  }
+
+  .responseMessage{
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .recommended-prompts {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .floating-container {
+    padding: 15px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #ffffff;
+  }
+
+  .floating-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Loading text styling */
+.loading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dot animation */
+.dot {
+  animation: blink 1.5s infinite;
+  font-size: 24px;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Keyframes for blinking effect */
+@keyframes blink {
+  0%, 20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
